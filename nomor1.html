@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nomor 1</title>
+</head>
+<body>
+<script>
+	function hitung(array){
+		var hasil = [];
+
+        for(var i = 0; i < array.length; i++){
+        	hasil[i] = 0;
+        }
+
+		for(var i = 0; i < array.length; i++){
+           for(var j = 0; j < array.length; j++){
+           	  if (i != j) {
+           	  	hasil[i] += array[j];
+           	  }
+           }
+		}
+
+		var terbesar = Math.max.apply(null, hasil);
+		var terkecil = Math.min.apply(null, hasil);
+
+		return 'Maka angka terkecil dan terbesar adalah ' + terkecil + ' dan ' + terbesar;
+	}
+
+	console.log(hitung([2,3,4,5,6]));
+</script>
+</body>
+</html>
