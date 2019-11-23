@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nomor 2</title>
+</head>
+<body>
+<script>
+	function hitungKembalian(total,jumlah){
+	    var kembalian = jumlah - total;
+	    // kembalian Rp.50.000,-
+	    var limapuluh = (kembalian - (kembalian % 50000)) / 50000;
+	    var sisa1 = kembalian % 50000;
+	    var tampil1;
+        if(limapuluh != 0){
+	        tampil1 = limapuluh + ' x Rp. 50.000,-' + '\n';
+        } else {
+        	tampil1 = '';
+        }
+	    //kembalian Rp.20.000,-
+	    var duapuluh = (sisa1 - (sisa1 % 20000)) / 20000;
+	    var sisa2 = sisa1 % 20000;
+	    var tampil2;
+	    if(duapuluh != 0){
+	        tampil2 = duapuluh + ' x Rp. 20.000,-' + '\n';
+        } else {
+        	tampil2 = '';
+        }
+	    //kembalian Rp. 10.000,-
+	    var sepuluh = (sisa2 - (sisa2 % 10000)) / 10000;
+	    var sisa3 = sisa2 % 10000;
+	    var tampil3;
+	    if(sepuluh != 0){
+	        tampil3 = sepuluh + ' x Rp. 10.000,-' + '\n';
+        } else {
+        	tampil3 = '';
+        }
+	    //kembalian Rp. 5.000,-
+	    var lima = (sisa3 - (sisa3 % 5000)) / 5000;
+	    var sisa4 = sisa3 % 5000;
+	    var tampil4;
+	    if(lima != 0){
+	        tampil4 = lima + ' x Rp. 5.000,-' + '\n';
+        } else {
+        	tampil4 = '';
+        }
+	    //kembalian Rp. 2.000,-
+	    var dua = (sisa4 - (sisa4 % 2000)) / 2000;
+	    var sisa5 = sisa4 % 2000;
+	    var tampil5;
+	    if(dua != 0){
+	        tampil5 =   dua + ' x Rp. 2.000,-' + '\n';
+        } else {
+        	tampil5 = '';
+        }
+	    //kembalian Rp. 1.000,-
+	    var satu = (sisa5 - (sisa5 % 1000)) / 1000;
+	    var sisa6 = sisa5 % 1000;
+	    var tampil6;
+	    if(satu != 0){
+	        tampil6 = satu + ' x Rp. 1.000,-' + '\n';
+        } else {
+        	tampil6 = '';
+        }
+	    //kembalian Rp.500,-
+	    var limaratus = (sisa6 - (sisa6 % 500)) / 500;
+	    var tampil7;
+	    if(limaratus != 0){
+	        tampil7 = limaratus + ' x Rp. 500,-';
+        } else {
+        	tampil7 = '';
+        }
+
+
+	    return tampil1 +  tampil2 +  tampil3 +  tampil4 + tampil5 +  tampil6 + tampil7;
+	}
+
+	console.log(hitungKembalian(122500,200000));
+</script>
+</body>
+</html>
