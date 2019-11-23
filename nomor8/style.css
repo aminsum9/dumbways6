@@ -1,0 +1,57 @@
+html{
+	background: lightyellow;
+	margin: 0;
+	padding: 0;
+	height: 2000px;
+	width: 100%;
+}
+#container{
+	width: 1000px;
+    height: 3000px;
+    margin: auto;
+    background: lightgrey;
+}
+#container ul{
+	position: relative;
+	top: 50px;
+	padding: 50px
+}
+.kategori{
+	width: 1000px;
+	height: 500px;
+	background: magenta;
+	margin-bottom: 10px;
+}
+.kategori h1{
+	position: relative;
+	top: 30px;
+	left: 20px;
+	color: #fff;
+	font-family: verdana;
+}
+#container ul li{
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+}
+#tambah{
+	width: 150px;
+	height: 50px;
+	background: purple;
+	border-radius: 10px;
+	color: #fff;
+	font-family: verdana;
+	cursor: pointer;
+	position: relative;
+	left: 20px;
+	top: 20px;
+}
+#tambah p{
+  margin-left: 44px;
+  line-height: 44px;
+}
+.konten{
+	width: 210px;
+	height: 250px;
+	background: salmon;
+}
