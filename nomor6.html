@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nomor 6</title>
+</head>
+<body>
+<script>
+	function buyEgg(tanggal,uang){
+		var jumlahTelur = uang/2500;
+		var lusinTelur = Math.floor(jumlahTelur/12);
+		var bonus;
+
+		if (tanggal == 2 || tanggal == 3 || tanggal == 5 || tanggal == 7 || tanggal == 11 || tanggal == 13 || tanggal == 17 || tanggal == 19 || tanggal == 23 || tanggal == 29 || tanggal == 31) {
+			bonus = lusinTelur*2;
+            jumlahTelur += bonus;
+		}
+		if (tanggal == 1 || tanggal == 9 || tanggal == 15 || tanggal == 21 || tanggal == 25 || tanggal == 27) {
+			bonus = lusinTelur*3;
+			jumlahTelur += bonus;
+		}
+		if (tanggal == 5 || tanggal == 10 || tanggal == 15 || tanggal == 20 || tanggal == 25 || tanggal == 30) {
+			if (bonus % 2 == 0) {
+				jumlahTelur -= bonus;
+				bonus *= 10;
+				jumlahTelur += bonus;
+			}
+			if (bonus % 2 == 1) {
+				jumlahTelur -= bonus;
+				bonus *= 5;
+				jumlahTelur += bonus;
+			}
+		}
+
+		return jumlahTelur;
+	}
+
+	console.log(buyEgg(13,60000));
+</script>
+</body>
+</html>
