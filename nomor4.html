@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nomor 4</title>
+</head>
+<body>
+<script>
+	function hitungVoucher(voucher,total){
+	  var diskon = 0;
+	  var dibayar;
+	  var kembalian = 0;
+      if (voucher == 'DumbWaysAsik') {
+      	if(total >= 20000){
+           diskon = 40/100 * total;
+           if (diskon <= 20000) {
+              dibayar = total - diskon;
+           } 
+           if(diskon > 20000){
+           	  diskon = 0;
+           	  dibayar = total;
+           }
+      	} else{
+      		dibayar = total;
+      	}
+      } else if(voucher == 'DumbWaysMantap') {
+        if (total >= 50000) {
+        	diskon = 30/100 * total;
+        	if (diskon <= 40000) {
+        		dibayar = total - diskon;
+        	} 
+        	if (diskon > 40000){
+        		diskon = 0;
+        		dibayar = total;
+        	}
+        } else {
+        	dibayar = total;
+        }
+      } else {
+      	dibayar = total;
+      }
+      kembalian = total - dibayar;
+
+      return 'dibayar = Rp.' + dibayar + '\n' + 'diskon = Rp.' + diskon + '\n' + 'kembalian = Rp.' + kembalian;
+	}
+
+	console.log(hitungVoucher('DumbWaysAsik', 30000));
+</script>
+</body>
+</html>
